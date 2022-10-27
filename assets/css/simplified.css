@@ -397,6 +397,11 @@ html {
   text-transform: capitalize;
 }
 
+/*-----------------Make text italics--------------------------  */
+.italics{
+  font-style:italics;
+}
+
 /* ------------------POSITIONING AND DISPLAY-------------------- */
 
 /* ---Aligns items horizontally------------------- */
