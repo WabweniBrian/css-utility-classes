@@ -402,6 +402,10 @@ a {
   text-align: right;
 }
 
+.italics {
+  font-style: italic;
+}
+
 /* -------------------Makes the text white---------------------- */
 .text-white,
 .text-light {
