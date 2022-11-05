@@ -54,11 +54,11 @@ html {
   );
 
   /* Font Sizes */
-  --font-10: 0.6rem;
+  --font-10: 0.625rem;
   --font-11: 0.6875rem;
   --font-12: 0.75rem;
   --font-13: 0.8125rem;
-  --font-14: 0.9875rem;
+  --font-14: 0.875rem;
   --font-15: 0.9375rem;
   --font-16: 1rem;
   --font-17: 1.0625rem;
@@ -67,10 +67,18 @@ html {
   --font-22: 1.375rem;
   --font-25: 1.5625rem;
   --font-30: 1.875rem;
+  --font-35: 2.1875rem;
   --font-40: 2.5rem;
+  --font-45: 2.8125rem;
   --font-50: 3.125rem;
+  --font-55: 3.4375rem;
   --font-60: 3.75rem;
+  --font-65: 4.0625rem;
   --font-70: 4.375rem;
+  --font-75: 4.6875rem;
+  --font-80: 5rem;
+  --font-85: 5.3125rem;
+  --font-90: 5.625rem;
 
   --text-sm: 0.9rem;
   --text-md: 1.5rem;
@@ -90,6 +98,9 @@ html {
   --opacity-8: 0.8;
   --opacity-9: 0.9;
   --opacity-10: 1;
+
+  /*------------------ Transtion--------------------- */
+  --transtion: all 0.3s ease-in-out;
 }
 
 /* --------------------------GENERAL CLASSES FOR ANY ELEMENT------------------------ */
@@ -180,6 +191,10 @@ a {
 
 .list-style-decimal {
   list-style: decimal;
+}
+
+.transtion-all {
+  transition: var(--transtion);
 }
 
 /*--------------------- Opacity-------------------- */
@@ -348,35 +363,59 @@ a {
 .text-30 {
   font-size: var(--font-30) !important;
 }
+.text-35 {
+  font-size: var(--font-35) !important;
+}
 .text-40 {
   font-size: var(--font-40) !important;
+}
+.text-45 {
+  font-size: var(--font-45) !important;
 }
 .text-50 {
   font-size: var(--font-50) !important;
 }
+.text-55 {
+  font-size: var(--font-55) !important;
+}
 .text-60 {
   font-size: var(--font-60) !important;
+}
+.text-65 {
+  font-size: var(--font-65) !important;
 }
 .text-70 {
   font-size: var(--font-70) !important;
 }
+.text-75 {
+  font-size: var(--font-75) !important;
+}
+.text-80 {
+  font-size: var(--font-80) !important;
+}
+.text-85 {
+  font-size: var(--font-85) !important;
+}
+.text-90 {
+  font-size: var(--font-90) !important;
+}
 
-/* ---------Small text 14.4px----------------- */
+/* ---------Small text 14.0.25rem----------------- */
 .text-sm {
   font-size: var(--text-md) !important;
 }
 
-/* ---------Medium text  24px----------------- */
+/* ---------Medium text  20.25rem----------------- */
 .text-md {
   font-size: var(--text-md) !important;
 }
 
-/* ---------Large text 40px----------------- */
+/* ---------Large text 2.5rem----------------- */
 .text-lg {
   font-size: var(--text-lg) !important;
 }
 
-/* ---------Xtra large 48px----------------- */
+/* ---------Xtra large 40.5rem----------------- */
 .text-xl {
   font-size: var(--text-xl) !important;
 }
@@ -439,7 +478,7 @@ a {
 }
 
 /* Add a font-weight of 800*/
-.font-semibold {
+.font-extrabold {
   font-weight: 800;
 }
 
@@ -477,17 +516,17 @@ a {
 
 /* ---Aligns items horizontally------------------- */
 .d-inline {
-  display: inline;
+  display: inline !important;
 }
 
 /* ---Aligns items horizontally maintaining the spacing befor------------------- */
 .d-inline-block {
-  display: inline-block;
+  display: inline-block !important;
 }
 
 /* ---Aligns items vertically------------------- */
 .d-block {
-  display: block;
+  display: block !important;
 }
 
 /* ------------------POSITION-------------------- */
@@ -948,10 +987,13 @@ a {
   flex: 1 1 35rem;
 }
 .grow-shrink-40 {
-  flex: 1 1 10rem;
+  flex: 1 1 40rem;
 }
-.grow-shrink-40 {
-  flex: 1 1 10rem;
+.grow-shrink-45 {
+  flex: 1 1 45rem;
+}
+.grow-shrink-50 {
+  flex: 1 1 50rem;
 }
 
 /* General flex properties */
@@ -1070,6 +1112,14 @@ a {
   flex-shrink: 0;
 }
 
+.col-reverse {
+  flex-direction: column-reverse;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
 /* --------Used for creating grid -> Laying out content */
 .grid {
   display: grid;
@@ -1126,63 +1176,63 @@ a {
 
 /* -------------Auto columns---------------------------------- */
 .grid-col-100 {
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(6.25rem, 1fr));
 }
 
 .grid-col-150 {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
 }
 
 .grid-col-200 {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
 }
 
 .grid-col-250 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
 }
 
 .grid-col-300 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
 }
 
 .grid-col-350 {
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
 }
 
 .grid-col-400 {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 
 .grid-col-450 {
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(28.125rem, 1fr));
 }
 
 .grid-col-500 {
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
 }
 
 .grid-col-550 {
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(34.375rem, 1fr));
 }
 
 .grid-col-600 {
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(37.5rem, 1fr));
 }
 
 .grid-col-650 {
-  grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(40.625rem, 1fr));
 }
 
 .grid-col-700 {
-  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(43.75rem, 1fr));
 }
 
 .grid-col-750 {
-  grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(46.875rem, 1fr));
 }
 
 .grid-col-800 {
-  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
 }
 
 /* ----Places the grid items in the center both vertically and horizonatally */
@@ -1257,61 +1307,61 @@ a {
   margin-bottom: 0;
 }
 
-/* --------------1rem -> 16px on either left and right--------------- */
+/* --------------1rem -> 10.375rem on either left and right--------------- */
 .mx-2 {
   margin-right: 1rem;
   margin-left: 1rem;
 }
 
-/* --------------1.5rem -> 24px on either left and right--------------- */
+/* --------------1.5rem -> 20.25rem on either left and right--------------- */
 .mx-3 {
   margin-right: 1.5rem;
   margin-left: 1.5rem;
 }
 
-/* --------------2rem -> 32px on either left and right--------------- */
+/* --------------2rem -> 30.125rem on either left and right--------------- */
 .mx-4 {
   margin-right: 2rem;
   margin-left: 2rem;
 }
 
-/* --------------2.5rem -> 40px on either left and right--------------- */
+/* --------------2.5rem -> 2.5rem on either left and right--------------- */
 .mx-5 {
   margin-right: 2.5rem;
   margin-left: 2.5rem;
 }
 
-/* --------------3rem -> 48px on either left and right--------------- */
+/* --------------3rem -> 40.5rem on either left and right--------------- */
 .mx-6 {
   margin-right: 3rem;
   margin-left: 3rem;
 }
 
-/* --------------1rem -> 16px on either top and bottom--------------- */
+/* --------------1rem -> 10.375rem on either top and bottom--------------- */
 .my-2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
-/* --------------1.5rem -> 24px on either top and bottom--------------- */
+/* --------------1.5rem -> 20.25rem on either top and bottom--------------- */
 .my-3 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* --------------2rem -> 32px on either top and bottom--------------- */
+/* --------------2rem -> 30.125rem on either top and bottom--------------- */
 .my-4 {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
-/* --------------2.5rem -> 40px on either top and bottom--------------- */
+/* --------------2.5rem -> 2.5rem on either top and bottom--------------- */
 .my-5 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
-/* --------------3rem -> 48px on either top and bottom--------------- */
+/* --------------3rem -> 40.5rem on either top and bottom--------------- */
 .my-6 {
   margin-top: 3rem;
   margin-bottom: 3rem;
@@ -1693,61 +1743,61 @@ a {
   padding-bottom: 0;
 }
 
-/* --------------1rem -> 16px on either left and right--------------- */
+/* --------------1rem -> 10.375rem on either left and right--------------- */
 .px-2 {
   padding-right: 1rem;
   padding-left: 1rem;
 }
 
-/* --------------1.5rem -> 24px on either left and right--------------- */
+/* --------------1.5rem -> 20.25rem on either left and right--------------- */
 .px-3 {
   padding-right: 1.5rem;
   padding-left: 1.5rem;
 }
 
-/* --------------2rem -> 32px on either left and right--------------- */
+/* --------------2rem -> 30.125rem on either left and right--------------- */
 .px-4 {
   padding-right: 2rem;
   padding-left: 2rem;
 }
 
-/* --------------2.5rem -> 40px on either left and right--------------- */
+/* --------------2.5rem -> 2.5rem on either left and right--------------- */
 .px-5 {
   padding-right: 2.5rem;
   padding-left: 2.5rem;
 }
 
-/* --------------3rem -> 48px on either left and right--------------- */
+/* --------------3rem -> 40.5rem on either left and right--------------- */
 .px-6 {
   padding-right: 3rem;
   padding-left: 3rem;
 }
 
-/* --------------1rem -> 16px on either top and bottom--------------- */
+/* --------------1rem -> 10.375rem on either top and bottom--------------- */
 .py-2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-/* --------------1.5rem -> 24px on either top and bottom--------------- */
+/* --------------1.5rem -> 20.25rem on either top and bottom--------------- */
 .py-3 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-/* --------------2rem -> 32px on either top and bottom--------------- */
+/* --------------2rem -> 30.125rem on either top and bottom--------------- */
 .py-4 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-/* --------------2.5rem -> 40px on either top and bottom--------------- */
+/* --------------2.5rem -> 2.5rem on either top and bottom--------------- */
 .py-5 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
 
-/* --------------3rem -> 48px on either top and bottom--------------- */
+/* --------------3rem -> 40.5rem on either top and bottom--------------- */
 .py-6 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -2078,8 +2128,16 @@ a {
   max-width: 100vw;
 }
 
+.max-w-0 {
+  max-width: 0vw;
+}
+
 .min-w-100 {
   min-width: 100vw;
+}
+
+.min-w-0 {
+  min-width: 0vw;
 }
 
 .w-100 {
@@ -2126,143 +2184,149 @@ a {
 }
 
 .width-10 {
-  width: 10px;
+  width: 0.625rem;
 }
 .width-15 {
-  width: 15px;
+  width: 0.9375rem;
 }
 .width-20 {
-  width: 20px;
+  width: 1.25rem;
 }
 .width-25 {
-  width: 25px;
+  width: 1.5625rem;
 }
 .width-30 {
-  width: 30px;
+  width: 1.875rem;
 }
 .width-35 {
-  width: 35px;
+  width: 2.1875rem;
 }
 .width-40 {
-  width: 40px;
+  width: 2.5rem;
 }
 .width-45 {
-  width: 45px;
+  width: 2.8125rem;
 }
 .width-50 {
-  width: 50px;
+  width: 3.125rem;
 }
 .width-55 {
-  width: 55px;
+  width: 3.4375rem;
 }
 .width-60 {
-  width: 60px;
+  width: 3.75rem;
 }
 .width-65 {
-  width: 65px;
+  width: 4.0625rem;
 }
 .width-70 {
-  width: 70px;
+  width: 4.375rem;
 }
 .width-75 {
-  width: 75px;
+  width: 4.6875rem;
 }
 .width-80 {
-  width: 85px;
+  width: 5rem;
 }
 .width-85 {
-  width: 85px;
+  width: 5.3125rem;
 }
 .width-90 {
-  width: 90px;
+  width: 5.625rem;
 }
 .width-95 {
-  width: 95px;
+  width: 5.9375rem;
 }
 .width-100 {
-  width: 100px;
+  width: 6.25rem;
 }
 .width-150 {
-  width: 150px;
+  width: 9.375rem;
 }
 .width-200 {
-  width: 200px;
+  width: 12.5rem;
 }
 .width-250 {
-  width: 250px;
+  width: 15.625rem;
 }
 .width-300 {
-  width: 300px;
+  width: 18.75rem;
 }
 .width-350 {
-  width: 350px;
+  width: 21.875rem;
 }
 .width-400 {
-  width: 400px;
+  width: 25rem;
 }
 .width-450 {
-  width: 450px;
+  width: 28.125rem;
 }
 .width-500 {
-  width: 500px;
+  width: 31.25rem;
 }
 .width-550 {
-  width: 550px;
+  width: 34.375rem;
 }
 .width-600 {
-  width: 600px;
+  width: 37.5rem;
 }
 .width-650 {
-  width: 670px;
+  width: 64.375rem;
 }
 .width-700 {
-  width: 700px;
+  width: 43.75rem;
+}
+.width-750 {
+  width: 46.875rem;
+}
+.width-800 {
+  width: 50rem;
 }
 
 .max-w-100 {
-  max-width: 100px;
+  max-width: 6.25rem;
 }
 .max-w-150 {
-  max-width: 150px;
+  max-width: 9.375rem;
 }
 .max-w-200 {
-  max-width: 200px;
+  max-width: 12.5rem;
 }
 .max-w-250 {
-  max-width: 250px;
+  max-width: 15.625rem;
 }
 .max-w-300 {
-  max-width: 300px;
+  max-width: 18.75rem;
 }
 .max-w-350 {
-  max-width: 350px;
+  max-width: 21.875rem;
 }
 .max-w-400 {
-  max-width: 400px;
+  max-width: 25rem;
 }
 .max-w-450 {
-  max-width: 450px;
+  max-width: 28.125rem;
 }
 .max-w-500 {
-  max-width: 500px;
+  max-width: 31.25rem;
 }
 .max-w-550 {
-  max-width: 550px;
+  max-width: 34.375rem;
 }
 .max-w-600 {
-  max-width: 600px;
+  max-width: 37.5rem;
 }
 .max-w-650 {
-  max-width: 650px;
+  max-width: 40.625rem;
 }
 .max-w-700 {
-  max-width: 700px;
+  max-width: 43.75rem;
 }
 .max-w-750 {
-  max-width: 750px;
+  max-width: 46.875rem;
 }
 .max-w-800 {
-  max-width: 800px;
+  max-width: 50rem;
 }
 
 /* ------------------------HEIGHT---------------------------------- */
@@ -2277,9 +2341,15 @@ a {
 .max-h-100 {
   max-height: 100vh;
 }
+.max-h-0 {
+  max-height: 0vh;
+}
 
 .min-h-100 {
   min-height: 100vh;
+}
+.min-h-0 {
+  min-height: 0vh;
 }
 
 .h-100 {
@@ -2317,202 +2387,208 @@ a {
 }
 
 .height-10 {
-  height: 10px;
+  height: 0.625rem;
 }
 .height-15 {
-  height: 15px;
+  height: 0.9375rem;
 }
 .height-20 {
-  height: 20px;
+  height: 1.25rem;
 }
 .height-25 {
-  height: 25px;
+  height: 1.5625rem;
 }
 .height-30 {
-  height: 30px;
+  height: 1.875rem;
 }
 .height-35 {
-  height: 35px;
+  height: 2.1875rem;
 }
 .height-40 {
-  height: 40px;
+  height: 2.5rem;
 }
 .height-45 {
-  height: 45px;
+  height: 2.8125rem;
 }
 .height-50 {
-  height: 50px;
+  height: 3.125rem;
 }
 .height-55 {
-  height: 55px;
+  height: 3.4375rem;
 }
 .height-60 {
-  height: 60px;
+  height: 3.75rem;
 }
 .height-65 {
-  height: 65px;
+  height: 4.0625rem;
 }
 .height-70 {
-  height: 70px;
+  height: 4.375rem;
 }
 .height-75 {
-  height: 75px;
+  height: 4.6875rem;
 }
 .height-80 {
-  height: 85px;
+  height: 5rem;
 }
 .height-85 {
-  height: 85px;
+  height: 5.3125rem;
 }
 .height-90 {
-  height: 90px;
+  height: 5.625rem;
 }
 .height-95 {
-  height: 95px;
+  height: 5.9375rem;
 }
 .height-100 {
-  height: 100px;
+  height: 6.25rem;
 }
 .height-150 {
-  height: 150px;
+  height: 9.375rem;
 }
 .height-200 {
-  height: 200px;
+  height: 12.5rem;
 }
 .height-250 {
-  height: 250px;
+  height: 15.625rem;
 }
 .height-300 {
-  height: 300px;
+  height: 18.75rem;
 }
 .height-350 {
-  height: 350px;
+  height: 21.875rem;
 }
 .height-400 {
-  height: 400px;
+  height: 25rem;
 }
 .height-450 {
-  height: 450px;
+  height: 28.125rem;
 }
 .height-500 {
-  height: 500px;
+  height: 31.25rem;
 }
 .height-550 {
-  height: 550px;
+  height: 34.375rem;
 }
 .height-600 {
-  height: 600px;
+  height: 37.5rem;
 }
 .height-650 {
-  height: 670px;
+  height: 64.375rem;
 }
 .height-700 {
-  height: 700px;
+  height: 43.75rem;
+}
+.width-750 {
+  width: 46.875rem;
+}
+.width-800 {
+  width: 50rem;
 }
 
 /* ------------------------BORDERS------------------------------- */
 .border {
-  border: 1px solid #878e98;
+  border: 0.0625rem solid #878e98;
 }
 
 .border-light {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 0.0625rem solid rgba(0, 0, 0, 0.1);
 }
 
 .border-2 {
-  border: 2px solid #878e98;
+  border: 0.125rem solid #878e98;
 }
 
 .border-3 {
-  border: 3px solid #878e98;
+  border: 0.1875rem solid #878e98;
 }
 
 .border-4 {
-  border: 4px solid #878e98;
+  border: 0.25rem solid #878e98;
 }
 
 .border-5 {
-  border: 5px solid #878e98;
+  border: 0.3125rem solid #878e98;
 }
 
 .border-6 {
-  border: 6px solid #878e98;
+  border: 0.375rem solid #878e98;
 }
 
 .border-top {
-  border-top: 1px solid #878e98;
+  border-top: 0.0625rem solid #878e98;
 }
 .border-top-light {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
 }
 
 .border-bottom {
-  border-bottom: 1px solid #878e98;
+  border-bottom: 0.0625rem solid #878e98;
 }
 .border-bottom-light {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1);
 }
 
 .border-left {
-  border-left: 1px solid #878e98;
+  border-left: 0.0625rem solid #878e98;
 }
 .border-left-light {
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 0.0625rem solid rgba(0, 0, 0, 0.1);
 }
 
 .border-right {
-  border-right: 1px solid #878e98;
+  border-right: 0.0625rem solid #878e98;
 }
 .border-right-light {
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 0.0625rem solid rgba(0, 0, 0, 0.1);
 }
 
 .border-top-2 {
-  border-top: 2px solid #878e98;
+  border-top: 0.125rem solid #878e98;
 }
 
 .border-bottom-2 {
-  border-bottom: 2px solid #878e98;
+  border-bottom: 0.125rem solid #878e98;
 }
 
 .border-left-2 {
-  border-left: 2px solid #878e98;
+  border-left: 0.125rem solid #878e98;
 }
 
 .border-right-2 {
-  border-right: 1px solid #878e98;
+  border-right: 0.0625rem solid #878e98;
 }
 
 .border-top-3 {
-  border-top: 3px solid #878e98;
+  border-top: 0.1875rem solid #878e98;
 }
 
 .border-bottom-3 {
-  border-bottom: 3px solid #878e98;
+  border-bottom: 0.1875rem solid #878e98;
 }
 
 .border-left-3 {
-  border-left: 3px solid #878e98;
+  border-left: 0.1875rem solid #878e98;
 }
 
 .border-right-3 {
-  border-right: 3px solid #878e98;
+  border-right: 0.1875rem solid #878e98;
 }
 
 .border-top-4 {
-  border-top: 4px solid #878e98;
+  border-top: 0.25rem solid #878e98;
 }
 
 .border-bottom-4 {
-  border-bottom: 4px solid #878e98;
+  border-bottom: 0.25rem solid #878e98;
 }
 
 .border-left-4 {
-  border-left: 4px solid #878e98;
+  border-left: 0.25rem solid #878e98;
 }
 
 .border-right-4 {
-  border-right: 4px solid #878e98;
+  border-right: 0.25rem solid #878e98;
 }
 
 .border-primary {
@@ -2537,25 +2613,25 @@ a {
 
 /* ---------------------------SHADOWS---------------------------- */
 .shadow-light {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 .shadow-xs {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 .shadow-sm {
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.125rem 0.125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
 .shadow {
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1875rem 0.1875rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 .shadow-md {
-  box-shadow: 6px 6px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.375rem 0.375rem 1.875rem rgba(0, 0, 0, 0.25);
 }
 .shadow-lg {
-  box-shadow: 8px 8px 35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.5rem 0.5rem 2.1875rem rgba(0, 0, 0, 0.3);
 }
 
 /* --------------------------BORDER RADIUS------------------------------ */
@@ -2608,7 +2684,7 @@ input.btn {
   color: #232531;
   padding: 0.4rem 1rem;
   background-color: #9ba6b7;
-  font-size: var(--font-14);
+  font-size: var(--font-15);
   background-position: center;
   transition: background 0.8s;
 }
@@ -2731,7 +2807,7 @@ input.btn-danger-gradient {
 .btn-primary-outlined,
 a.btn-primary-outlined,
 input.btn-primary-outlined {
-  border: 1px solid var(--primary-color);
+  border: 0.0625rem solid var(--primary-color);
   background: transparent;
   color: var(--primary-color);
 }
@@ -2739,7 +2815,7 @@ input.btn-primary-outlined {
 .btn-secondary-outlined,
 a.btn-secondary-outlined,
 input.btn-secondary-outlined {
-  border: 1px solid var(--secondary-color);
+  border: 0.0625rem solid var(--secondary-color);
   background: transparent;
   color: var(--secondary-color);
 }
@@ -2747,7 +2823,7 @@ input.btn-secondary-outlined {
 .btn-warning-outlined,
 a.btn-warning-outlined,
 input.btn-warning-outlined {
-  border: 1px solid var(--warning-color);
+  border: 0.0625rem solid var(--warning-color);
   background: transparent;
   color: var(--warning-color);
 }
@@ -2755,7 +2831,7 @@ input.btn-warning-outlined {
 .btn-success-outlined,
 a.btn-success-outlined,
 input.btn-success-outlined {
-  border: 1px solid var(--success-color);
+  border: 0.0625rem solid var(--success-color);
   background: transparent;
   color: var(--success-color);
 }
@@ -2763,7 +2839,7 @@ input.btn-success-outlined {
 .btn-danger-outlined,
 a.btn-danger-outlined,
 input.btn-danger-outlined {
-  border: 1px solid var(--danger-color);
+  border: 0.0625rem solid var(--danger-color);
   background: transparent;
   color: var(--danger-color);
 }
@@ -2771,8 +2847,8 @@ input.btn-danger-outlined {
 .btn-circle,
 a.btn-circle,
 input.btn-circle {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -2782,29 +2858,29 @@ input.btn-circle {
 .btn-circle-sm,
 a.btn-circle-sm,
 input.btn-circle-sm {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .btn-circle-md,
 a.btn-circle-md,
 input.btn-circle-md {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
 }
 
 .btn-circle-lg,
 a.btn-circle-lg,
 input.btn-circle-lg {
-  width: 65px;
-  height: 65px;
+  width: 4.0625rem;
+  height: 4.0625rem;
 }
 
 .btn-circle-xl,
 a.btn-circle-xl,
 input.btn-circle-xl {
-  width: 75px;
-  height: 75px;
+  width: 4.6875rem;
+  height: 4.6875rem;
 }
 
 /* -------------------------------------------------------FORM INPUT FIELDS--------------------------------------------------- */
@@ -2818,7 +2894,7 @@ select {
 }
 
 .form-control {
-  border: 1px solid rgb(174, 200, 206);
+  border: 0.0625rem solid rgb(174, 200, 206);
   outline: none;
   border-radius: 0.5rem;
   font-family: inherit;
@@ -2829,7 +2905,7 @@ select {
 }
 
 .form-control:focus {
-  border: 1px solid rgb(83, 182, 247);
+  border: 0.0625rem solid rgb(83, 182, 247);
 }
 
 .form-control-sm {
@@ -2848,7 +2924,7 @@ select {
 }
 
 .input-with-icon {
-  border: 1px solid rgb(174, 200, 206);
+  border: 0.0625rem solid rgb(174, 200, 206);
   position: relative;
   display: flex;
   align-items: center;
@@ -2903,7 +2979,7 @@ select {
   color: var(--primary-color);
   margin-right: 0.4rem;
   border-radius: 0.1rem;
-  border: 1px solid #979dc0;
+  border: 0.0625rem solid #979dc0;
 }
 
 .input-check input[type="checkbox"]:checked + label::before {
@@ -2917,7 +2993,7 @@ select {
 
 .input-check input[type="checkbox"].check-primary ~ label::before,
 .input-radio input[type="radio"].radio-primary ~ label::before {
-  border: 1px solid var(--primary-color);
+  border: 0.0625rem solid var(--primary-color);
 }
 
 .input-check input[type="checkbox"].check-primary:checked + label::before,
@@ -2927,7 +3003,7 @@ select {
 
 .input-check input[type="checkbox"].check-secondary ~ label::before,
 .input-radio input[type="radio"].radio-secondary ~ label::before {
-  border: 1px solid var(--secondary-color);
+  border: 0.0625rem solid var(--secondary-color);
 }
 
 .input-check input[type="checkbox"].check-secondary:checked + label::before,
@@ -2937,7 +3013,7 @@ select {
 
 .input-check input[type="checkbox"].check-warning ~ label::before,
 .input-radio input[type="radio"].radio-warning ~ label::before {
-  border: 1px solid var(--warning-color);
+  border: 0.0625rem solid var(--warning-color);
 }
 
 .input-check input[type="checkbox"].check-warning:checked + label::before,
@@ -2947,7 +3023,7 @@ select {
 
 .input-check input[type="checkbox"].check-success ~ label::before,
 .input-radio input[type="radio"].radio-success ~ label::before {
-  border: 1px solid var(--success-color);
+  border: 0.0625rem solid var(--success-color);
 }
 
 .input-check input[type="checkbox"].check-success:checked + label::before,
@@ -2957,7 +3033,7 @@ select {
 
 .input-check input[type="checkbox"].check-danger ~ label::before,
 .input-radio input[type="radio"].radio-danger ~ label::before {
-  border: 1px solid var(--danger-color);
+  border: 0.0625rem solid var(--danger-color);
 }
 
 .input-check input[type="checkbox"].check-danger:checked + label::before,
@@ -2972,7 +3048,7 @@ select {
   color: var(--primary-color);
   margin-right: 0.4rem;
   border-radius: 50%;
-  border: 1px solid #979dc0;
+  border: 0.0625rem solid #979dc0;
 }
 
 .input-radio label::after {
@@ -3003,7 +3079,7 @@ select {
 }
 
 .border-around {
-  border: 1px solid #e3e6f0;
+  border: 0.0625rem solid #e3e6f0;
 }
 
 .table tr {
@@ -3013,7 +3089,7 @@ select {
 .table td {
   padding: 0.5rem 0.4rem;
   text-align: left;
-  border-top: 1px solid #d6dcee;
+  border-top: 0.0625rem solid #d6dcee;
 }
 
 .table th {
@@ -3032,7 +3108,7 @@ table.table.table-striped td {
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #d6dcee;
+  border: 0.0625rem solid #d6dcee;
 }
 
 .table-borderless td,
@@ -3056,7 +3132,7 @@ table.table.table-striped td {
 }
 
 .table-dark td {
-  border-top: 1px solid rgb(74, 83, 89) !important;
+  border-top: 0.0625rem solid rgb(74, 83, 89) !important;
 }
 
 .table-dark thead {
@@ -3064,7 +3140,7 @@ table.table.table-striped td {
 }
 
 .table-dark-bordered td {
-  border: 1px solid rgb(74, 83, 89) !important;
+  border: 0.0625rem solid rgb(74, 83, 89) !important;
 }
 
 .table-dark.table-borderless {
@@ -3090,28 +3166,28 @@ table.table.table-striped td {
 }
 
 .profile-avatar {
-  width: 45px;
-  height: 45px;
+  width: 2.8125rem;
+  height: 2.8125rem;
   border-radius: 50%;
 }
 .profile-avatar-sm {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
   border-radius: 50%;
 }
 .profile-avatar-md {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
 }
 .profile-avatar-lg {
-  width: 60px;
-  height: 60px;
+  width: 3.75rem;
+  height: 3.75rem;
   border-radius: 50%;
 }
 .profile-avatar-xl {
-  width: 70px;
-  height: 70px;
+  width: 4.375rem;
+  height: 4.375rem;
   border-radius: 50%;
 }
 
@@ -3164,7 +3240,7 @@ table.table.table-striped td {
   margin: 0.8rem 0;
   position: relative;
   width: 100%;
-  height: 6px;
+  height: 0.375rem;
   border-radius: 0.3rem;
   background-color: #c4c7dd;
 }
@@ -3195,12 +3271,12 @@ table.table.table-striped td {
   position: absolute;
   bottom: 100%;
   margin-bottom: 0.3rem;
-  width: 25px;
-  height: 25px;
+  width: 1.5625rem;
+  height: 1.5625rem;
   font-size: 0.5rem;
   background-color: #64656f;
   color: #fff;
-  border-radius: 150px 150px 0 150px;
+  border-radius: 9.375rem 9.375rem 0 9.375rem;
   transform: rotate(45deg);
   display: grid;
   place-items: center;
@@ -3233,7 +3309,7 @@ table.table.table-striped td {
 /* --------------- LIST GROUP--------------------- */
 
 ul.list-group {
-  border: 1px solid #a3a6b9;
+  border: 0.0625rem solid #a3a6b9;
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -3247,7 +3323,7 @@ ul.list-group li.list-group-item {
 }
 
 ul.list-group li.list-group-item:not(:first-child) {
-  border-top: 1px solid #a4a7ba;
+  border-top: 0.0625rem solid #a4a7ba;
 }
 
 ul.list-group li.list-group-item.active {
@@ -3263,20 +3339,20 @@ ul.list-group.with-badge li.list-group-item {
 /* -------------------------PAGINATION---------------------- */
 ul.pagination {
   display: flex;
-  border: 1px solid rgb(177, 177, 177);
+  border: 0.0625rem solid rgb(177, 177, 177);
   width: fit-content;
   border-radius: 0.4rem;
 }
 
 ul.pagination li {
   list-style: none;
-  width: 40px;
+  width: 2.5rem;
   display: grid;
   place-items: center;
 }
 
 ul.pagination li:not(:last-child) {
-  border-right: 1px solid rgb(177, 177, 177);
+  border-right: 0.0625rem solid rgb(177, 177, 177);
 }
 
 ul.pagination li a {
@@ -3285,7 +3361,7 @@ ul.pagination li a {
 
 .pagination li:first-child,
 .pagination li:last-child {
-  width: 80px;
+  width: 5rem;
 }
 
 ul.pagination li.active {
@@ -3311,7 +3387,7 @@ ul.pagination.no-border li {
 }
 
 ul.pagination.no-border {
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.125rem 0.125rem 0.9375rem rgba(0, 0, 0, 0.2);
 }
 
 ul.pagination.no-border li {
@@ -3333,7 +3409,7 @@ ul.pagination.no-border li a {
   width: 100%;
   outline: none;
   border: none;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 0.0625rem solid var(--primary-color);
   background-color: transparent;
   padding: 0.4rem 1rem;
   cursor: pointer;
@@ -3342,9 +3418,9 @@ ul.pagination.no-border li a {
 
 .tab-wrapper .tab-links button.active {
   border-bottom: none;
-  border-top: 1px solid var(--primary-color);
-  border-left: 1px solid var(--primary-color);
-  border-right: 1px solid var(--primary-color);
+  border-top: 0.0625rem solid var(--primary-color);
+  border-left: 0.0625rem solid var(--primary-color);
+  border-right: 0.0625rem solid var(--primary-color);
 }
 
 .tab-wrapper .tab-panels,
@@ -3372,7 +3448,7 @@ ul.pagination.no-border li a {
 
 .tab-indicator {
   position: relative;
-  height: 2px;
+  height: 0.125rem;
   background: var(--primary-color);
   left: 0;
   top: 0.2rem;
@@ -3418,10 +3494,10 @@ ul.pagination.no-border li a {
 }
 
 .modal-dialog {
-  max-width: 400px;
+  max-width: 25rem;
   background-color: #fff;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  transform: translateY(-500px);
+  box-shadow: 0.1875rem 0.1875rem 0.375rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-31.25rem);
   transition: all 0.3s ease-in-out;
 }
 
