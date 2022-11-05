@@ -100,7 +100,7 @@ html {
   --opacity-10: 1;
 
   /*------------------ Transtion--------------------- */
-  --transtion: all 0.3s ease-in-out;
+  --transition: all 0.3s ease-in-out;
 }
 
 /* --------------------------GENERAL CLASSES FOR ANY ELEMENT------------------------ */
@@ -193,8 +193,8 @@ a {
   list-style: decimal;
 }
 
-.transtion-all {
-  transition: var(--transtion);
+.transition-all {
+  transition: var(--transition);
 }
 
 /*--------------------- Opacity-------------------- */
