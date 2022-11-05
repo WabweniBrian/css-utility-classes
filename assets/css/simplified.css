@@ -551,6 +551,10 @@ a {
   top: 0;
 }
 
+.top-none {
+  top: 0;
+}
+
 .top-1 {
   top: 0.5rem;
 }
@@ -620,6 +624,9 @@ a {
 
 /* RIGHT */
 .right-0 {
+  right: 0;
+}
+.right-none {
   right: 0;
 }
 
@@ -694,6 +701,9 @@ a {
 .bottom-0 {
   bottom: 0;
 }
+.bottom-none {
+  bottom: 0;
+}
 
 .bottom-1 {
   bottom: 0.5rem;
@@ -763,6 +773,9 @@ a {
 }
 /* LEFT */
 .left-0 {
+  left: 0;
+}
+.left-none {
   left: 0;
 }
 
